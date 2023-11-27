@@ -1,0 +1,22 @@
+<div>
+  <label>Title</label>
+  <input type="text" name="title" value="<%= book.title %>">
+</div>
+<div>
+  <label>Author</label>
+  <select name="author">
+    <% authors.forEach(author => { %>
+      <option label="<%= author.name %>" value="<%= author.name %>">
+        <%= author.name %>
+      </option>
+    <% }) %>
+  </select>
+</div>
+<div>
+  <label>Summary</label>
+  <textarea type="text" name="summary"><%= book.summary %></textarea>
+</div>
+<div>
+  <label>ISBN</label>
+  <textarea type="text" name="isbn"><%= book.isbn %></textarea>
+</div>

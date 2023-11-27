@@ -6,5 +6,13 @@
 </form>
 <br>
 <% authors.forEach(author => { %>
-  <div><%= author.name %></div>
+  <div>
+    <ul>
+        <li><%= author.first_name %></li>
+        <li><%= author.family_name %></li>
+        <li><%= author.date_of_birth %></li>
+        <li><%= author.date_of_death %></li>
+        <li><%= author.name %></li>
+    </ul>
+</div>
 <% }) %>

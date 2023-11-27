@@ -1,0 +1,17 @@
+<h2>Search Books</h2>
+<form action="/books" method="GET">
+  <label>Name</label>
+  <input type="text" name="Title" value="<%= searchOptions.title %>">
+  <button type="submit">Search</button>
+</form>
+<br>
+<% books.forEach(book => { %>
+  <div>
+    <ul>
+        <li><%= book.title %></li>
+        <li><%= book.author %></li>
+        <li><%= book.summary %></li>
+        <li><%= book.isbn %></li>
+    </ul>
+</div>
+<% }) %>

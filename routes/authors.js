@@ -26,9 +26,16 @@ router.get('/new', (req, res) => {
 
 // Create Author Route
 router.post('/', async (req, res) => {
+ 
+ 
   const author = new Author({
+    first_name: req.body.first_name,
+    family_name: req.body.family_name,
+    date_of_birth: req.body.date_of_birth,
+    date_of_death: req.body.date_of_death,
     name: req.body.name
   })
+  console.log(req.body.first_name)
   try {
     const newAuthor = await author.save()
     // res.redirect(`authors/${newAuthor.id}`)
