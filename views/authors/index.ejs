@@ -15,8 +15,8 @@
 <div class="scrollable-list">
   <% authors.forEach(author => { %>
     <p>________________________</p>
-    <div class="author-row">
-      <br><div class="author-name"><%= author.name %></div><br>
+    <div style="margin: 5px;">
+      <br><div><%= author.name %></div><br>
       
       <div class="btn-row">
         <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>

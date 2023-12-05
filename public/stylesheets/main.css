@@ -57,6 +57,20 @@ body {
   padding: 20px;
 }
 
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  opacity: 0.5; 
+}
+
+
 a {
   color: #3498db;
   text-decoration: none;
@@ -198,7 +212,7 @@ input, textarea {
   gap: 10px;
   flex-wrap: nowrap;
   overflow-x: auto;
-  padding-bottom: 10px; /* Add padding to prevent the scrollbar from overlapping content */
+  padding-bottom: 10px;
 }
 
 .book-square-a {
@@ -217,7 +231,6 @@ input, textarea {
   box-shadow: 0 0 0 2px #594e3d;
 }
 
-/* Modern Scrollbar Styling */
 .book-container-a::-webkit-scrollbar {
   width: 10px;
 }
@@ -231,7 +244,6 @@ input, textarea {
   background-color: #1e1e1e;
 }
 
-/* Modern Scrollbar Styling */
 .book-summary::-webkit-scrollbar {
   width: 10px;
 }
