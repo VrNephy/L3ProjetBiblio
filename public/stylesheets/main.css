@@ -231,6 +231,7 @@ input, textarea {
   box-shadow: 0 0 0 2px #594e3d;
 }
 
+/* Modern Scrollbar Styling */
 .book-container-a::-webkit-scrollbar {
   width: 10px;
 }
@@ -244,6 +245,7 @@ input, textarea {
   background-color: #1e1e1e;
 }
 
+/* Modern Scrollbar Styling */
 .book-summary::-webkit-scrollbar {
   width: 10px;
 }
