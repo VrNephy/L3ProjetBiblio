@@ -1,0 +1,194 @@
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-image: url('https://cdn.discordapp.com/attachments/1088526452103856138/1181214883363172403/1326370.png?ex=65803f16&is=656dca16&hm=a1d56c594d1cfc976b1c41c1b28a592f602650cc450e7fe24457cbe1bd29f35a&');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+header {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #594e3d;
+}
+
+h1 {
+  color: #fff;
+}
+
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+nav a {
+  font-size: 20px;
+  color: #594e3d;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #1f1f1f;
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.book-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.book-link {
+  text-decoration: none;
+}
+
+.book-square {
+  width: 100px;
+  height: 150px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 2px #594e3d;
+}
+
+.book-square:hover {
+  background-color: #1e1e1e;
+  transform: scale(1.05);
+  box-shadow: none;
+  color: #fff;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #1e1e1e;
+  border: none;
+  height: 30px;
+  box-shadow: 0 0 0 2px #594e3d;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 2px #594e3d;
+}
+
+.btn-delete {
+  background-color: #1e1e1e;
+  border: none;
+  height: 30px;
+  box-shadow: 0 0 0 2px #594e3d;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 2px darkred;
+}
+
+.btn-delete:hover {
+  background-color: #1e1e1e;
+  transform: scale(1.05);
+  box-shadow: none;
+  color: red;
+}
+
+.btn-primary:hover {
+  background-color: #1e1e1e;
+  transform: scale(1.05);
+  box-shadow: none;
+  color: #fff;
+}
+
+.delete-form {
+  display: inline;
+  background-color: #1e1e1e;
+}
+
+.scrollable-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.scrollable-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+  background-color: #594e3d;
+  border-radius: 10px;
+}
+
+.scrollable-list::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.book-summary {
+  height: 70px;
+  width: 500px;
+  overflow-y: scroll;
+  margin-top: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-button-container {
+  display: flex;
+  align-items: center;
+}

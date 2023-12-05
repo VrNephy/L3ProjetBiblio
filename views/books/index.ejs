@@ -1,17 +1,38 @@
-<h2>Search Books</h2>
-<form action="/books" method="GET">
-  <label>Name</label>
-  <input type="text" name="Title" value="<%= searchOptions.title %>">
-  <button type="submit">Search</button>
-</form>
+<h2 class="page-header">Search Book</h2>
 <br>
-<% books.forEach(book => { %>
-  <div>
-    <ul>
-        <li><%= book.title %></li>
-        <li><%= book.author %></li>
-        <li><%= book.summary %></li>
-        <li><%= book.isbn %></li>
-    </ul>
+<p>Total Books: <%= books.length %></p>
+
+<form action="/books" method="GET" class="search-form">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Title</label>
+      <input type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+  </div>
+  <div class="search-button-container">
+    <button style="width:212px;" class="btn btn-primary" type="submit">Search</button>
+    <h2 style="margin-left: 12px;">Summary</h2>
+  </div>
+</form>
+
+<br>
+
+<div class="scrollable-list">
+  <% books.forEach(book => { %>
+
+    <div class="book-container">
+      <div class="book-info">
+        <br><div><%= book.title %></div><br>
+        <a class="btn btn-primary" href="/books/<%= book.id %>">View</a>
+        <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
+        <%- include('../partials/deleteForm', { url: `/books/${book.id}` }) %>
+      </div>
+      <div class="book-summary"><br>
+        <div><%= book.summary %></div>
+      </div>
+    </div>
+
+    <p>________________________</p>
+
+  <% }) %>
 </div>
-<% }) %>

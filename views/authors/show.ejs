@@ -1,0 +1,31 @@
+<br>
+<h2 class="page-header"><%= author.name %></h2>
+<br>
+<div>
+  <p>First name: <%= author.first_name %></p><br>
+  <p>Family name: <%= author.family_name %></p><br>
+  <p>Age: <%= author.age %></p><br>
+  <p>Date of birth: <%= author.date_of_birth ? author.date_of_birth.toLocaleDateString('en-GB') : 'Unavailable' %></p><br>
+  <p>Date of death: <%= author.date_of_death ? author.date_of_death.toLocaleDateString('en-GB') : 'Alive' %></p><br>
+</div>
+
+<div class="btn-row">
+  <a href="/authors/<%= author.id %>/edit" class="btn btn-primary">Edit</a>
+  <%- include('../partials/deleteForm', { url: `/authors/${author.id}`, buttonClass: 'btn-delete' }) %>
+</div>
+
+
+<br>
+
+<% if (booksByAuthor.length > 0) { %>
+  <h2>Books By Author</h2><br>
+  <div class="book-container">
+    <% booksByAuthor.forEach(book => { %>
+      <a href="/books/<%= book.id %>" class="book-link">
+        <div class="book-square">
+          <%= book.title %>
+        </div>
+      </a>
+    <% }); %>
+  </div>
+<% } %>

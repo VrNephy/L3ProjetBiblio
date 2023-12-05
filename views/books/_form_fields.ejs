@@ -2,17 +2,19 @@
   <label>Title</label>
   <input type="text" name="title" value="<%= book.title %>">
 </div>
-<div>
+<div><br>
   <label>Author</label>
   <select name="author">
     <% authors.forEach(author => { %>
-      <option label="<%= author.name %>" value="<%= author.name %>">
-        <%= author.name %>
-      </option>
+      <% if (author.id === book.author) { %>
+        <option selected label="<%= author.name %>" value="<%= author.id %>">
+      <% } else { %>
+        <option label="<%= author.name %>" value="<%= author.id %>">
+      <% } %>
     <% }) %>
   </select>
 </div>
-<div>
+<br><div>
   <label>Summary</label>
   <textarea type="text" name="summary"><%= book.summary %></textarea>
 </div>
