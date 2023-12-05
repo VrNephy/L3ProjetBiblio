@@ -192,3 +192,55 @@ input, textarea {
   display: flex;
   align-items: center;
 }
+
+.book-container-a {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px; /* Add padding to prevent the scrollbar from overlapping content */
+}
+
+.book-square-a {
+  margin:5px;
+  width: 100px;
+  height: 150px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 0 2px #594e3d;
+}
+
+/* Modern Scrollbar Styling */
+.book-container-a::-webkit-scrollbar {
+  width: 10px;
+}
+
+.book-container-a::-webkit-scrollbar-thumb {
+  background-color: #594e3d;
+  border-radius: 10px;
+}
+
+.book-container-a::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
+/* Modern Scrollbar Styling */
+.book-summary::-webkit-scrollbar {
+  width: 10px;
+}
+
+.book-summary::-webkit-scrollbar-thumb {
+  background-color: #594e3d;
+  border-radius: 10px;
+}
+
+.book-summary::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}

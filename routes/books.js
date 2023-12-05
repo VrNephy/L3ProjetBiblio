@@ -3,7 +3,7 @@ const router = express.Router()
 const Book = require('../models/book')
 const Author = require('../models/author')
 
-// Books Routes
+// All Books Route
 router.get('/', async (req, res) => {
   let query = Book.find()
   if (req.query.title != null && req.query.title != '') {
@@ -25,7 +25,7 @@ router.get('/new', async (req, res) => {
   renderNewPage(res, new Book())
 })
 
-// Créer Book Route
+// Create Book Route
 router.post('/', async (req, res) => {
   const book = new Book({
     title: req.body.title,

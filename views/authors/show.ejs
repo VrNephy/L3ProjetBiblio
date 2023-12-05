@@ -19,10 +19,10 @@
 
 <% if (booksByAuthor.length > 0) { %>
   <h2>Books By Author</h2><br>
-  <div class="book-container">
+  <div class="book-container-a">
     <% booksByAuthor.forEach(book => { %>
       <a href="/books/<%= book.id %>" class="book-link">
-        <div class="book-square">
+        <div class="book-square-a">
           <%= book.title %>
         </div>
       </a>
