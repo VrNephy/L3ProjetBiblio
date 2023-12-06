@@ -130,11 +130,9 @@ router.put('/:id', [
     author.date_of_birth = req.body.date_of_birth;
     author.date_of_death = req.body.date_of_death;
 
-    // Validation result
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      // There are errors. Render the form page with error messages.
       renderEditPage(res, author, true, errors.array());
       return;
     }
