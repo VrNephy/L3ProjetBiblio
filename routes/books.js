@@ -67,7 +67,6 @@ router.get('/:id/edit', async (req, res) => {
 router.put(
   '/:id',
   [
-    // Validate and sanitize fields.
     body('title', 'Title must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('author', 'Author must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }).escape(),
@@ -83,11 +82,9 @@ router.put(
       book.summary = req.body.summary;
       book.isbn = req.body.isbn;
 
-      // Validation result
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
-        // There are errors. Render the form page with error messages.
         renderEditPage(res, book, true, errors.array());
         return;
       }
